@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Festa do Francisco · 2 aninhos</title>
+<meta name="description" content="Convite: piquenique de 2 anos do Francisco — 29 de agosto de 2026, 12h, Bosque Alphaville, Maricá/RJ. Confirme sua presença!">
+<meta name="theme-color" content="#ffd21e">
 <template id="__bundler_thumbnail" data-bg-color="#5db8ea">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="800" fill="#5db8ea"/>
@@ -22,8 +25,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Luckiest+Guy&amp;display=swap" rel="stylesheet">
 <style>
-  html,body{ margin:0; padding:0; }
+  html,body{ margin:0; padding:0; overflow-x:clip; }
   body{ background:#ffd21e; }
+  .sky-col{ overflow:clip; }
+  @media (min-width: 768px){
+    .sky-col{
+      max-width: 520px !important;
+      margin: 32px auto !important;
+      min-height: auto !important;
+      border-radius: 28px;
+      box-shadow: 0 26px 70px rgba(20,58,94,.30) !important;
+    }
+  }
   @keyframes floatY { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-9px) } }
   @keyframes floatYbig { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-16px) } }
   @keyframes pop { 0%{ transform: scale(.6); opacity:0 } 60%{ transform: scale(1.08) } 100%{ transform: scale(1); opacity:1 } }
@@ -31,7 +44,7 @@
 </style>
 </helmet>
 
-<div style="max-width: 460px; margin: 0 auto; min-height: 100vh; position: relative; background-image: url('images/clouds-hq.png'); background-repeat: repeat-y; background-position: top center; background-size: 500px auto; box-shadow: 0 0 60px rgba(0,0,0,.18); font-family: Nunito, sans-serif">
+<div class="sky-col" style="max-width: 460px; margin: 0 auto; min-height: 100vh; position: relative; background-image: url('images/clouds-hq.png'); background-repeat: repeat-y; background-position: top center; background-size: 100% auto; box-shadow: 0 0 60px rgba(0,0,0,.18); font-family: Nunito, sans-serif">
 
     <!-- ============ STICKY NAV ============ -->
     <div style="position:sticky; top:0; z-index:40; backdrop-filter:blur(8px); background:rgba(255,210,30,.92); border-bottom:2px solid rgba(180,140,10,.3);">
@@ -47,7 +60,7 @@
     </div>
 
     <!-- floating clouds deco -->
-    <div style="position: absolute; top: 121px; left: 21px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div><div style="position: absolute; top: 232px; left: 400px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div>
+    <div style="position: absolute; top: 121px; left: 21px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div><div style="position: absolute; top: 232px; right: 30px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div>
 
     <!-- ============ HERO ============ -->
     
@@ -78,22 +91,22 @@
                     animation:floatY 7s ease-in-out infinite 1s;">
       </div>
       <!-- countdown regressivo -->
-      <div style="display:flex; justify-content:center; gap:10px; margin:16px 0 4px;">
-        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
-          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.d }}</div>
-          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">dias</div>
+      <div style="display:flex; justify-content:center; gap:8px; margin:16px 0 4px;">
+        <div style="flex:1 1 0; max-width:76px; text-align:center; background:#173a5b; border-radius:14px; padding:10px 4px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; line-height:1;">{{ cd.d }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#9fc3e0; letter-spacing:1px; text-transform:uppercase;">dias</div>
         </div>
-        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
-          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.h }}</div>
-          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">horas</div>
+        <div style="flex:1 1 0; max-width:76px; text-align:center; background:#173a5b; border-radius:14px; padding:10px 4px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; line-height:1;">{{ cd.h }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#9fc3e0; letter-spacing:1px; text-transform:uppercase;">horas</div>
         </div>
-        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
-          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.m }}</div>
-          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">min</div>
+        <div style="flex:1 1 0; max-width:76px; text-align:center; background:#173a5b; border-radius:14px; padding:10px 4px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; line-height:1;">{{ cd.m }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#9fc3e0; letter-spacing:1px; text-transform:uppercase;">min</div>
         </div>
-        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
-          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.s }}</div>
-          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">seg</div>
+        <div style="flex:1 1 0; max-width:76px; text-align:center; background:#173a5b; border-radius:14px; padding:10px 4px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; line-height:1;">{{ cd.s }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#9fc3e0; letter-spacing:1px; text-transform:uppercase;">seg</div>
         </div>
       </div>
       <img src="images/aliens.png" alt="Aliens" style="width:100%; max-width:300px; height:auto; filter:drop-shadow(0 9px 10px rgba(20,58,94,.28)); animation:floatYbig 6s ease-in-out infinite;">
@@ -132,7 +145,7 @@
           </div>
 
           <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:5px;">Seu nome*</div>
-          <input value="{{ form.nome }}" onInput="{{ onNome }}" placeholder="Seu nome completo" style="width:100%; box-sizing:border-box; height:44px; border-radius:12px; background:#f3f7fb; border:1.5px solid {{ erroNome }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none; margin-bottom:14px;">
+          <input value="{{ form.nome }}" onInput="{{ onNome }}" placeholder="Seu nome completo" style="width:100%; box-sizing:border-box; height:44px; border-radius:12px; background:#f3f7fb; border:1.5px solid {{ erroNome }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none; margin-bottom:14px;">
 
           <sc-if value="{{ form.vai }}" hint-placeholder-val="{{ true }}">
             <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:6px;">Incluindo você, quantas pessoas vão?</div>
@@ -162,9 +175,9 @@
               <div style="margin-bottom:10px;">
                 <div style="font-size:11px; font-weight:700; color:#9bb0c2; letter-spacing:.3px; margin-bottom:4px;">{{ c.label }}</div>
                 <div style="display:flex; gap:8px;">
-                  <input value="{{ c.value }}" onInput="{{ c.onInput }}" placeholder="{{ c.placeholder }}" style="flex:1; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 14px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none;">
+                  <input value="{{ c.value }}" onInput="{{ c.onInput }}" placeholder="{{ c.placeholder }}" style="flex:1; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none;">
                   <sc-if value="{{ c.isChild }}" hint-placeholder-val="{{ false }}">
-                    <input value="{{ c.idade }}" onInput="{{ c.onIdade }}" placeholder="Idade" type="number" min="0" max="17" style="width:76px; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 10px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none;">
+                    <input value="{{ c.idade }}" onInput="{{ c.onIdade }}" placeholder="Idade" type="number" min="0" max="17" style="width:76px; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 10px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none;">
                   </sc-if>
                 </div>
               </div>
@@ -177,7 +190,7 @@
       </div>
     </div><div style="height:30px; background:repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 74px), linear-gradient(180deg,#d49350,#a9651f); box-shadow:inset 0 3px 6px rgba(0,0,0,.12);"></div><div id="presentes" style="padding:18px 20px 8px; scroll-margin-top:64px;">
       <!-- rex decoração -->
-      <div style="text-align:right; margin:-10px 0 -20px; position:relative; z-index:2;">
+      <div style="text-align:right; margin:0 6px 2px;">
         <img src="images/rex.png" alt="Rex"
              style="width:90px; height:auto; filter:drop-shadow(0 6px 10px rgba(20,58,94,.25));
                     animation:floatY 7s ease-in-out infinite 1s;">
@@ -192,23 +205,7 @@
         </div>
       </sc-for>
 
-    </div><div style="position:relative; display:inline-block; margin:22px 0 8px;">
-        
-        <div style="position:relative; margin-top:10px;">
-          
-          
-        </div>
-      </div>
-    
-
-    <!-- ============ INFO CARD ============ -->
-    
-
-    <!-- ============ RSVP ============ -->
-    
-
-    <!-- ============ GIFTS ============ -->
-    
+    </div>
 
     <!-- ============ LOCAL / MAP ============ -->
     <div id="local" style="padding:22px 20px 10px; scroll-margin-top:64px;">
@@ -257,7 +254,7 @@ class Component extends DCLogic {
   // (as confirmações ficam salvas só neste aparelho).
   RSVP_ENDPOINT = 'https://formspree.io/f/mrenkvog';
   GIFTS = [
-    { nome: 'Roupa tam. 3 anos', icon: '✂', iconBg:'#dff0ff', iconColor:'#2a6fb0' },
+    { nome: 'Roupa tam. 3 anos', icon: '👕', iconBg:'#dff0ff', iconColor:'#2a6fb0' },
     { nome: 'Sapato tam. 24 ou 25', icon: '👟', iconBg:'#ffe7e4', iconColor:'#e8473b' },
     { nome: 'Livrinhos infantis', icon: '📚', iconBg:'#fff0db', iconColor:'#e8943b' },
     { nome: 'Brinquedos lúdicos / educativos', icon: '🧩', iconBg:'#e4f5e6', iconColor:'#43a047' },
