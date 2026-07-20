@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#5db8ea">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#5db8ea"/>
+    <ellipse cx="240" cy="200" rx="120" ry="46" fill="#fff"/>
+    <ellipse cx="960" cy="300" rx="140" ry="52" fill="#fff"/>
+    <ellipse cx="430" cy="560" rx="110" ry="42" fill="#fff"/>
+    <rect x="250" y="350" width="700" height="120" rx="14" transform="rotate(-2 600 410)" fill="#e8473b"/>
+    <text x="600" y="395" font-family="Luckiest Guy, sans-serif" font-size="92" fill="#ffd21e" stroke="#173a5b" stroke-width="6" text-anchor="middle">FRANCISCO</text>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Luckiest+Guy&amp;display=swap" rel="stylesheet">
+<style>
+  html,body{ margin:0; padding:0; }
+  body{ background:#ffd21e; }
+  @keyframes floatY { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-9px) } }
+  @keyframes floatYbig { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-16px) } }
+  @keyframes pop { 0%{ transform: scale(.6); opacity:0 } 60%{ transform: scale(1.08) } 100%{ transform: scale(1); opacity:1 } }
+  @keyframes fall { 0%{ transform: translateY(-20px) rotate(0); opacity:0 } 12%{ opacity:1 } 100%{ transform: translateY(560px) rotate(320deg); opacity:0 } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #ffd21e; font-family: 'Nunito',sans-serif; color: #143a5e; padding: 0; position: absolute; left: 278px; top: 2px">
+
+  <!-- sky column on a yellow frame -->
+  
+</div>
+
+<div style="max-width: 460px; margin: 0 auto; min-height: 100vh; position: absolute; background-image: url('images/clouds-hq.png'); background-repeat: repeat-y; background-position: top center; background-size: 500px auto; box-shadow: 0 0 60px rgba(0,0,0,.18); left: 276px; top: 7px; font-family: Nunito, sans-serif">
+
+    <!-- ============ STICKY NAV ============ -->
+    <div style="position:sticky; top:0; z-index:40; backdrop-filter:blur(8px); background:rgba(255,210,30,.92); border-bottom:2px solid rgba(180,140,10,.3);">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 18px;">
+        <div style="font-family:'Fredoka',sans-serif; font-weight:700; font-size:17px; color:#173a5b; display:flex; align-items:center; gap:7px;">
+          <span style="display:inline-flex; width:24px; height:24px; border-radius:50%; background:#e8473b; color:#fff; align-items:center; justify-content:center; font-size:13px; box-shadow:0 2px 0 #b5281d;">★</span>
+          Francisco · 2
+        </div>
+        <div style="display:flex; gap:4px;">
+          <a href="#presenca" style="text-decoration:none; font-family:'Fredoka',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#e8473b; padding:7px 14px; border-radius:999px; box-shadow:0 3px 0 #b5281d;">Confirmar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- floating clouds deco -->
+    <div style="position: absolute; top: 121px; left: 21px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div><div style="position: absolute; top: 232px; left: 400px; width: 78px; height: 30px; background: #fff; border-radius: 999px; box-shadow: 22px 7px 0 -4px #fff,-18px 6px 0 -2px #fff,2px -10px 0 -5px #fff; opacity: .55; animation: floatY 6s ease-in-out infinite; pointer-events: none"></div>
+
+    <!-- ============ HERO ============ -->
+    
+
+    <!-- baseboard + wood floor (like a toy room) -->
+    <div style="padding:30px 24px 22px; text-align:center; position:relative;">
+      
+
+      <!-- poster logo -->
+      <div style="margin:22px 0 8px;">
+        <img src="images/francisco-story-logo.png" alt="Francisco Story 2" style="width:100%; max-width:320px; height:auto; filter:drop-shadow(0 8px 14px rgba(0,0,0,.25));">
+      </div>
+      
+
+      <!-- toy badge cluster -->
+      <!-- personagens hero -->
+      <div style="display:flex; justify-content:center; gap:0; margin:16px 0 8px; align-items:flex-end;">
+        <img src="images/woody.png" alt="Woody"
+             style="width:130px; height:auto; filter:drop-shadow(0 8px 12px rgba(20,58,94,.3));
+                    animation:floatY 5s ease-in-out infinite; transform-origin:bottom center;">
+        <img src="images/buzz.png" alt="Buzz Lightyear"
+             style="width:145px; height:auto; filter:drop-shadow(0 8px 12px rgba(20,58,94,.3));
+                    animation:floatY 5.5s ease-in-out infinite .5s; transform-origin:bottom center;">
+      </div>
+
+      <!-- live countdown -->
+      <div style="display:inline-block; background:#e8473b; color:#fff; font-family:'Fredoka',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.5px; padding:6px 16px; border-radius:999px; box-shadow:0 4px 0 #b5281d;">vem comemorar comigo meus 2 aninhos!</div>
+      <!-- countdown regressivo -->
+      <div style="display:flex; justify-content:center; gap:10px; margin:16px 0 4px;">
+        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.d }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">dias</div>
+        </div>
+        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.h }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">horas</div>
+        </div>
+        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.m }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">min</div>
+        </div>
+        <div style="text-align:center; background:#173a5b; border-radius:14px; padding:10px 14px; min-width:54px;">
+          <div style="font-family:'Luckiest Guy',cursive; font-size:28px; color:#ffd21e; line-height:1;">{{ cd.s }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600; color:#6b9dbf; letter-spacing:1px; text-transform:uppercase;">seg</div>
+        </div>
+      </div>
+      <img src="images/aliens.png" alt="Aliens" style="width:100%; max-width:300px; height:auto; filter:drop-shadow(0 9px 10px rgba(20,58,94,.28)); animation:floatYbig 6s ease-in-out infinite;">
+    </div><div style="height:30px; background:repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 74px), linear-gradient(180deg,#d49350,#a9651f); box-shadow:inset 0 3px 6px rgba(0,0,0,.12);"></div><div style="background:#eef1f4; padding:11px 20px; text-align:center; border-top:1px solid #dfe4ea;">
+      <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; color:#2a6fb0;">Sábado, 29 de agosto · 12h</div>
+    </div><div style="background: #fff; border-radius: 24px; padding: 6px 20px; box-shadow: 0 10px 26px rgba(40,80,130,.16); width: 318px; height: 158px; position: static; display: block; margin-left: 50px; margin-right: 50px; padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; margin-top: 15px; margin-bottom: 15px">
+        <div style="display:flex; gap:13px; align-items:center; padding:16px 0; border-bottom:1px solid #eef2f6;">
+          <div style="width:44px; height:44px; flex-shrink:0; border-radius:13px; background:#dff0ff; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#2a6fb0; font-family:'Fredoka',sans-serif; line-height:1;"><div style="font-size:9px; font-weight:600;">AGO</div><div style="font-size:18px; font-weight:700;">29</div></div>
+          <div><div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">Sábado, 29 de agosto</div><div style="font-size:13.5px; color:#6b8299;">2026 · Piquenique a partir das 12h</div></div>
+        </div>
+        <div style="display:flex; gap:13px; align-items:center; padding:16px 0;">
+          <div style="width:44px; height:44px; flex-shrink:0; border-radius:13px; background:#fff0db; display:flex; align-items:center; justify-content:center; color:#e8943b; font-size:20px;">◎</div>
+          <div><div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">Bosque Alphaville</div><div style="font-size:13.5px; color:#6b8299;">Inoã · Maricá — RJ</div></div>
+        </div>
+      </div><div id="presenca" style="padding:18px 20px 14px; scroll-margin-top:64px;">
+      <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; letter-spacing:.5px; text-transform:uppercase; text-shadow:2px 2px 0 #173a5b,-2px 2px 0 #173a5b,2px -2px 0 #173a5b,-2px -2px 0 #173a5b,2px 0 0 #173a5b,-2px 0 0 #173a5b,0 2px 0 #173a5b,0 -2px 0 #173a5b; margin:4px 2px 6px;">Confirme sua presença</div>
+      <div style="font-size:13.5px; color:#4a6a86; margin:0 2px 14px; line-height:1.5;">A confirmação é essencial para liberar a entrada de vocês na portaria do condomínio. Por favor, confirme até <b>15 de agosto</b>.</div>
+
+      <div style="background: #fff; border-radius: 24px; padding: 20px; box-shadow: 0 10px 26px rgba(40,80,130,.16); width: 383px; height: 442px; transform-origin: 100% 0; transform: scale(1.0024,0.9887)">
+
+        <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+          <!-- SUCCESS STATE -->
+          <div style="text-align:center; padding:14px 4px;">
+            <div style="width:72px; height:72px; margin:0 auto 12px; border-radius:50%; background:#43a047; display:flex; align-items:center; justify-content:center; font-size:36px; color:#fff; box-shadow:0 6px 0 #2c7330; animation:pop .5s ease-out both;">✓</div>
+            <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:21px; color:#143a5e;">Presença confirmada!</div>
+            <div style="font-size:14px; color:#4a6a86; margin-top:6px; line-height:1.5;">Obrigado, <b>{{ form.nome }}</b>! Já anotamos você{{ acompanhantesTxt }}. Mal podemos esperar para celebrar os 2 aninhos do Francisco. 🎈</div>
+            <div onClick="{{ resetar }}" style="cursor:pointer; display:inline-block; margin-top:16px; font-family:'Fredoka',sans-serif; font-weight:500; font-size:13.5px; color:#2a6fb0; border:1.5px solid #cfe2f1; padding:9px 18px; border-radius:999px;">Enviar outra confirmação</div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ naoEnviado }}" hint-placeholder-val="{{ true }}">
+          <!-- toggle vai / não vai -->
+          <div style="display:flex; gap:8px; margin-bottom:16px; background:#f3f7fb; padding:5px; border-radius:14px;">
+            <div onClick="{{ setVai }}" style="cursor:pointer; flex:1; text-align:center; padding:10px; border-radius:10px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; background:{{ vaiBg }}; color:{{ vaiColor }}; box-shadow:{{ vaiShadow }};">Eu vou! ★</div>
+            <div onClick="{{ setNaoVai }}" style="cursor:pointer; flex:1; text-align:center; padding:10px; border-radius:10px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; background:{{ naoBg }}; color:{{ naoColor }};">Não poderei ir</div>
+          </div>
+
+          <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:5px;">Seu nome*</div>
+          <input value="{{ form.nome }}" onInput="{{ onNome }}" placeholder="Seu nome completo" style="width:100%; box-sizing:border-box; height:44px; border-radius:12px; background:#f3f7fb; border:1.5px solid {{ erroNome }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none; margin-bottom:14px;">
+
+          <sc-if value="{{ form.vai }}" hint-placeholder-val="{{ true }}">
+            <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:6px;">Incluindo você, quantas pessoas vão?</div>
+            <div style="display:flex; gap:10px; margin-bottom:14px;">
+              <div style="flex:1; background:#f3f7fb; border:1.5px solid #e1ebf3; border-radius:12px; padding:9px 12px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="font-size:13px; color:#4a6a86;">Adultos</div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div onClick="{{ decAd }}" style="cursor:pointer; width:26px; height:26px; border-radius:8px; background:#fff; border:1.5px solid #cfe2f1; color:#2a6fb0; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px;">−</div>
+                  <div style="min-width:16px; text-align:center; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">{{ form.adultos }}</div>
+                  <div onClick="{{ incAd }}" style="cursor:pointer; width:26px; height:26px; border-radius:8px; background:#fff; border:1.5px solid #cfe2f1; color:#2a6fb0; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px;">+</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; margin-bottom:14px;">
+              <div style="flex:1; background:#f3f7fb; border:1.5px solid #e1ebf3; border-radius:12px; padding:9px 12px; display:flex; align-items:center; justify-content:space-between;">
+                <div style="font-size:13px; color:#4a6a86;">Crianças</div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div onClick="{{ decCr }}" style="cursor:pointer; width:26px; height:26px; border-radius:8px; background:#fff; border:1.5px solid #cfe2f1; color:#2a6fb0; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px;">−</div>
+                  <div style="min-width:16px; text-align:center; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">{{ form.criancas }}</div>
+                  <div onClick="{{ incCr }}" style="cursor:pointer; width:26px; height:26px; border-radius:8px; background:#fff; border:1.5px solid #cfe2f1; color:#2a6fb0; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px;">+</div>
+                </div>
+              </div>
+            </div>
+
+            
+            <sc-for list="{{ convidados }}" as="c" hint-placeholder-count="1">
+              <div style="margin-bottom:10px;">
+                <div style="font-size:11px; font-weight:700; color:#9bb0c2; letter-spacing:.3px; margin-bottom:4px;">{{ c.label }}</div>
+                <div style="display:flex; gap:8px;">
+                  <input value="{{ c.value }}" onInput="{{ c.onInput }}" placeholder="{{ c.placeholder }}" style="flex:1; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 14px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none;">
+                  <sc-if value="{{ c.isChild }}" hint-placeholder-val="{{ false }}">
+                    <input value="{{ c.idade }}" onInput="{{ c.onIdade }}" placeholder="Idade" type="number" min="0" max="17" style="width:76px; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 10px; font-family:'Nunito',sans-serif; font-size:15px; color:#143a5e; outline:none;">
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </sc-if>
+
+          <div onClick="{{ enviar }}" style="cursor:pointer; height:52px; border-radius:15px; background:#e8473b; box-shadow:0 5px 0 #b5281d; display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Fredoka',sans-serif; font-weight:600; font-size:18px;">{{ btnLabel }}</div>
+        </sc-if>
+
+      </div>
+    </div><div style="height:30px; background:repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 74px), linear-gradient(180deg,#d49350,#a9651f); box-shadow:inset 0 3px 6px rgba(0,0,0,.12);"></div><div id="presentes" style="padding:18px 20px 8px; scroll-margin-top:64px;">
+      <!-- jessie decoração -->
+      <div style="text-align:right; margin:-10px 0 -30px; position:relative; z-index:2;">
+        <img src="images/jessie.png" alt="Jessie"
+             style="width:100px; height:auto; filter:drop-shadow(0 6px 10px rgba(20,58,94,.25));
+                    animation:floatY 7s ease-in-out infinite 1s;">
+      </div>
+      <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; letter-spacing:.5px; text-transform:uppercase; text-shadow:2px 2px 0 #173a5b,-2px 2px 0 #173a5b,2px -2px 0 #173a5b,-2px -2px 0 #173a5b,2px 0 0 #173a5b,-2px 0 0 #173a5b,0 2px 0 #173a5b,0 -2px 0 #173a5b; margin:4px 2px 6px;">Lista de presentes</div>
+      <div style="font-size:13.5px; color:#4a6a86; margin:0 2px 14px;">Algumas ideias, caso queira ajudar. 💛</div>
+
+      <sc-for list="{{ presentes }}" as="g" hint-placeholder-count="4">
+        <div style="display:flex; align-items:center; gap:13px; background:#fff; border-radius:18px; padding:13px 15px; margin-bottom:10px; box-shadow:0 5px 16px rgba(40,80,130,.1);">
+          <div style="width:38px; height:38px; flex-shrink:0; border-radius:11px; background:{{ g.iconBg }}; display:flex; align-items:center; justify-content:center; color:{{ g.iconColor }}; font-size:18px;">{{ g.icon }}</div>
+          <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:15px; color:#143a5e;">{{ g.nome }}</div>
+        </div>
+      </sc-for>
+
+    </div><div style="position:relative; display:inline-block; margin:22px 0 8px;">
+        
+        <div style="position:relative; margin-top:10px;">
+          
+          
+        </div>
+      </div>
+    
+
+    <!-- ============ INFO CARD ============ -->
+    
+
+    <!-- ============ RSVP ============ -->
+    
+
+    <!-- ============ GIFTS ============ -->
+    
+
+    <!-- ============ LOCAL / MAP ============ -->
+    <div id="local" style="padding:22px 20px 10px; scroll-margin-top:64px;">
+      <!-- personagem local -->
+      <div style="text-align:center; margin-bottom:8px;">
+        <img src="images/hamm.png" alt="Hamm"
+             style="width:80px; height:auto; filter:drop-shadow(0 5px 8px rgba(20,58,94,.2));
+                    animation:floatY 8s ease-in-out infinite 2s;">
+      </div>
+      <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; letter-spacing:.5px; text-transform:uppercase; text-shadow:2px 2px 0 #173a5b,-2px 2px 0 #173a5b,2px -2px 0 #173a5b,-2px -2px 0 #173a5b,2px 0 0 #173a5b,-2px 0 0 #173a5b,0 2px 0 #173a5b,0 -2px 0 #173a5b; margin:4px 2px 14px;">Como chegar</div>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="text-decoration:none; display:block; border-radius:24px; overflow:hidden; box-shadow:0 10px 26px rgba(40,80,130,.16); background:#fff;">
+        <div style="height:170px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="endereco-foto" shape="rect" placeholder="Foto do local" hint-size="100%,170px"></x-import>
+        </div>
+        <div style="padding:16px 18px;">
+          <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">Cond. Alphaville Maricá 1 - Bosque</div>
+          <div style="font-size:13.5px; color:#6b8299; margin:2px 0 14px;">Maricá — Rio de Janeiro</div>
+          <div style="text-align:center; background:#143a5e; color:#fff; padding:14px; border-radius:14px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px;">Abrir no Google Maps →</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div style="text-align:center; padding:28px 24px 40px;">
+      <div style="display:inline-flex; gap:7px; margin-bottom:10px;">
+        <span style="width:9px; height:9px; border-radius:50%; background:#e8473b;"></span>
+        <span style="width:9px; height:9px; border-radius:50%; background:#fbc02d;"></span>
+        <span style="width:9px; height:9px; border-radius:50%; background:#43a047;"></span>
+      </div>
+      <div style="font-family:'Fredoka',sans-serif; font-weight:500; font-size:14px; color:#2a6fb0;">Te esperamos na nossa festa! ☁️</div>
+      <div style="font-size:12px; color:#6b8299; margin-top:4px;">Francisco · 2 aninhos · 29.08.2026</div>
+    </div>
+
+  </div></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  // ===== CONFIGURAÇÃO =====
+  // Para receber as confirmações por e-mail, crie um formulário no Formspree
+  // (https://formspree.io) e cole a URL aqui. Em branco = modo demonstração
+  // (as confirmações ficam salvas só neste aparelho).
+  RSVP_ENDPOINT = '';
+  GIFTS = [
+    { nome: 'Roupa tam. 3 anos', icon: '✂', iconBg:'#dff0ff', iconColor:'#2a6fb0' },
+    { nome: 'Sapato tam. 24 ou 25', icon: '👟', iconBg:'#ffe7e4', iconColor:'#e8473b' },
+    { nome: 'Livrinhos infantis', icon: '📚', iconBg:'#fff0db', iconColor:'#e8943b' },
+    { nome: 'Brinquedos lúdicos / educativos', icon: '🧩', iconBg:'#e4f5e6', iconColor:'#43a047' },
+    { nome: 'Itens de Toy Story', icon: '🤠', iconBg:'#fdf0c0', iconColor:'#b8860b' },
+    { nome: 'Contribuição via Pix', icon: '💛', iconBg:'#fffbe6', iconColor:'#f9a825' },
+  ];
+
+  state = {
+    cd: { d:'--', h:'--', m:'--', s:'--' },
+    form: { nome:'', vai:true, adultos:1, criancas:0, guestNames:{}, guestAges:{} },
+    enviado: false,
+    erroNome: false,
+  };
+
+  startCountdown() {
+    const target = new Date('2026-08-29T12:00:00-03:00').getTime();
+    const tick = () => {
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      this.setState({ cd: {
+        d: String(d).padStart(2,'0'),
+        h: String(h).padStart(2,'0'),
+        m: String(m).padStart(2,'0'),
+        s: String(s).padStart(2,'0'),
+      }});
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  componentDidMount() {
+    this.startCountdown();
+  }
+
+  setField(k, v) { this.setState(st => ({ form: { ...st.form, [k]: v } })); }
+
+  setGuest(key, v) { this.setState(st => ({ form: { ...st.form, guestNames: { ...st.form.guestNames, [key]: v } } })); }
+
+  setGuestAge(key, v) { this.setState(st => ({ form: { ...st.form, guestAges: { ...st.form.guestAges, [key]: v } } })); }
+
+  enviar = () => {
+    const f = this.state.form;
+    if (!f.nome.trim()) { this.setState({ erroNome: true }); return; }
+    const payload = { ...f, enviadoEm: new Date().toISOString() };
+    try {
+      const all = JSON.parse(localStorage.getItem('francisco_rsvps') || '[]');
+      all.push(payload);
+      localStorage.setItem('francisco_rsvps', JSON.stringify(all));
+    } catch (e) {}
+    if (this.RSVP_ENDPOINT) {
+      fetch(this.RSVP_ENDPOINT, {
+        method:'POST',
+        headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify(payload),
+      }).catch(()=>{});
+    }
+    this.setState({ enviado: true, erroNome: false });
+  };
+
+  resetar = () => this.setState({
+    enviado: false,
+    form: { nome:'', vai:true, adultos:1, criancas:0, guestNames:{}, guestAges:{} },
+  });
+
+  renderVals() {
+    const f = this.state.form;
+    const vai = f.vai;
+    const total = f.adultos + f.criancas;
+    let acompanhantesTxt = '';
+    if (vai && total > 1) acompanhantesTxt = ' e mais ' + (total-1) + (total-1===1?' acompanhante':' acompanhantes');
+
+    const convidados = [];
+    for (let i = 0; i < f.adultos; i++) {
+      const key = 'a' + i;
+      convidados.push({ key, label: 'Adulto ' + (i+1), value: f.guestNames[key] || '', placeholder: 'Nome do adulto ' + (i+1), onInput: (e) => this.setGuest(key, e.target.value) });
+    }
+    for (let i = 0; i < f.criancas; i++) {
+      const key = 'c' + i;
+      convidados.push({ key, label: 'Criança ' + (i+1), value: f.guestNames[key] || '', placeholder: 'Nome da criança ' + (i+1), onInput: (e) => this.setGuest(key, e.target.value), isChild: true, idade: (f.guestAges && f.guestAges[key]) || '', onIdade: (e) => this.setGuestAge(key, e.target.value) });
+    }
+
+    const presentes = this.GIFTS;
+
+    return {
+      cd: this.state.cd,
+      form: f,
+      enviado: this.state.enviado,
+      naoEnviado: !this.state.enviado,
+      acompanhantesTxt,
+      convidados,
+      presentes,
+      btnLabel: vai ? 'Confirmar presença ★' : 'Enviar resposta',
+      erroNome: this.state.erroNome ? '#e8473b' : '#e1ebf3',
+      // toggle styles
+      setVai: () => this.setField('vai', true),
+      setNaoVai: () => this.setField('vai', false),
+      vaiBg: vai ? '#e8473b' : 'transparent',
+      vaiColor: vai ? '#fff' : '#6b8299',
+      vaiShadow: vai ? '0 3px 0 #b5281d' : 'none',
+      naoBg: !vai ? '#143a5e' : 'transparent',
+      naoColor: !vai ? '#fff' : '#6b8299',
+      // field handlers
+      onNome: (e) => this.setField('nome', e.target.value),
+      incAd: () => this.setField('adultos', Math.min(20, f.adultos+1)),
+      decAd: () => this.setField('adultos', Math.max(1, f.adultos-1)),
+      incCr: () => this.setField('criancas', Math.min(20, f.criancas+1)),
+      decCr: () => this.setField('criancas', Math.max(0, f.criancas-1)),
+      resetar: this.resetar,
+      enviar: this.enviar,
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Cond. Alphaville Maricá 1 - Bosque'),
+    };
+  }
+}
+</script>
+</body>
+</html>
