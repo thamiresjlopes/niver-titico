@@ -141,8 +141,10 @@
             <div onClick="{{ setNaoVai }}" style="cursor:pointer; flex:1; text-align:center; padding:10px; border-radius:10px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; background:{{ naoBg }}; color:{{ naoColor }};">Não poderei ir</div>
           </div>
 
-          <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:5px;">Seu nome*</div>
-          <input value="{{ form.nome }}" onInput="{{ onNome }}" placeholder="Seu nome completo" style="width:100%; box-sizing:border-box; height:44px; border-radius:12px; background:#f3f7fb; border:1.5px solid {{ erroNome }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none; margin-bottom:14px;">
+          <sc-if value="{{ naoVai }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:5px;">Seu nome completo*</div>
+            <input value="{{ form.nome }}" onInput="{{ onNome }}" placeholder="Seu nome completo" style="width:100%; box-sizing:border-box; height:44px; border-radius:12px; background:#f3f7fb; border:1.5px solid {{ erroNome }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none; margin-bottom:14px;">
+          </sc-if>
 
           <sc-if value="{{ form.vai }}" hint-placeholder-val="{{ true }}">
             <div style="font-size:12.5px; font-weight:700; color:#6b8299; margin-bottom:6px;">Incluindo você, quantas pessoas vão?</div>
@@ -172,7 +174,7 @@
               <div style="margin-bottom:10px;">
                 <div style="font-size:11px; font-weight:700; color:#9bb0c2; letter-spacing:.3px; margin-bottom:4px;">{{ c.label }}</div>
                 <div style="display:flex; gap:8px;">
-                  <input value="{{ c.value }}" onInput="{{ c.onInput }}" placeholder="{{ c.placeholder }}" style="flex:1; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none;">
+                  <input value="{{ c.value }}" onInput="{{ c.onInput }}" placeholder="{{ c.placeholder }}" style="flex:1; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid {{ c.border }}; padding:0 14px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none;">
                   <sc-if value="{{ c.isChild }}" hint-placeholder-val="{{ false }}">
                     <input value="{{ c.idade }}" onInput="{{ c.onIdade }}" placeholder="Idade" type="number" min="0" max="17" style="width:76px; box-sizing:border-box; height:42px; border-radius:11px; background:#f3f7fb; border:1.5px solid #e1ebf3; padding:0 10px; font-family:'Nunito',sans-serif; font-size:16px; color:#143a5e; outline:none;">
                   </sc-if>
@@ -297,8 +299,10 @@ class Component extends DCLogic {
 
   enviar = () => {
     const f = this.state.form;
-    if (!f.nome.trim()) { this.setState({ erroNome: true }); return; }
-    const payload = { ...f, enviadoEm: new Date().toISOString() };
+    // Quem vai se identifica no campo "Adulto 1"; quem não vai, no campo de nome.
+    const nome = (f.vai ? (f.guestNames.a0 || '') : f.nome).trim();
+    if (!nome) { this.setState({ erroNome: true }); return; }
+    const payload = { ...f, nome, enviadoEm: new Date().toISOString() };
     try {
       const all = JSON.parse(localStorage.getItem('francisco_rsvps') || '[]');
       all.push(payload);
@@ -311,7 +315,7 @@ class Component extends DCLogic {
         body: JSON.stringify(payload),
       }).catch(()=>{});
     }
-    this.setState({ enviado: true, erroNome: false });
+    this.setState(st => ({ enviado: true, erroNome: false, form: { ...st.form, nome } }));
   };
 
   resetar = () => this.setState({
@@ -329,11 +333,18 @@ class Component extends DCLogic {
     const convidados = [];
     for (let i = 0; i < f.adultos; i++) {
       const key = 'a' + i;
-      convidados.push({ key, label: 'Adulto ' + (i+1), value: f.guestNames[key] || '', placeholder: 'Nome do adulto ' + (i+1), onInput: (e) => this.setGuest(key, e.target.value) });
+      convidados.push({
+        key,
+        label: i === 0 ? 'Adulto 1 · você' : 'Adulto ' + (i+1),
+        value: f.guestNames[key] || '',
+        placeholder: i === 0 ? 'Seu nome completo' : 'Nome do adulto ' + (i+1),
+        border: (i === 0 && this.state.erroNome) ? '#e8473b' : '#e1ebf3',
+        onInput: (e) => this.setGuest(key, e.target.value),
+      });
     }
     for (let i = 0; i < f.criancas; i++) {
       const key = 'c' + i;
-      convidados.push({ key, label: 'Criança ' + (i+1), value: f.guestNames[key] || '', placeholder: 'Nome da criança ' + (i+1), onInput: (e) => this.setGuest(key, e.target.value), isChild: true, idade: (f.guestAges && f.guestAges[key]) || '', onIdade: (e) => this.setGuestAge(key, e.target.value) });
+      convidados.push({ key, label: 'Criança ' + (i+1), value: f.guestNames[key] || '', placeholder: 'Nome da criança ' + (i+1), border: '#e1ebf3', onInput: (e) => this.setGuest(key, e.target.value), isChild: true, idade: (f.guestAges && f.guestAges[key]) || '', onIdade: (e) => this.setGuestAge(key, e.target.value) });
     }
 
     const presentes = this.GIFTS;
@@ -343,6 +354,7 @@ class Component extends DCLogic {
       form: f,
       enviado: this.state.enviado,
       naoEnviado: !this.state.enviado,
+      naoVai: !vai,
       acompanhantesTxt,
       convidados,
       presentes,
