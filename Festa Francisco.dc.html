@@ -71,10 +71,10 @@
       </div>
 
       <!-- live countdown -->
-      <div style="display:flex; align-items:center; justify-content:center; gap:8px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px;">
         <div style="display:inline-block; background:#e8473b; color:#fff; font-family:'Fredoka',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.5px; padding:6px 16px; border-radius:999px; box-shadow:0 4px 0 #b5281d;">vem comemorar comigo meus 2 aninhos!</div>
         <img src="images/jessie.png" alt="Jessie"
-             style="width:44px; height:auto; filter:drop-shadow(0 4px 6px rgba(20,58,94,.25));
+             style="width:80px; height:auto; filter:drop-shadow(0 4px 6px rgba(20,58,94,.25));
                     animation:floatY 7s ease-in-out infinite 1s;">
       </div>
       <!-- countdown regressivo -->
@@ -99,7 +99,7 @@
       <img src="images/aliens.png" alt="Aliens" style="width:100%; max-width:300px; height:auto; filter:drop-shadow(0 9px 10px rgba(20,58,94,.28)); animation:floatYbig 6s ease-in-out infinite;">
     </div><div style="height:30px; background:repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 74px), linear-gradient(180deg,#d49350,#a9651f); box-shadow:inset 0 3px 6px rgba(0,0,0,.12);"></div><div style="background:#eef1f4; padding:11px 20px; text-align:center; border-top:1px solid #dfe4ea;">
       <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; color:#2a6fb0;">Sábado, 29 de agosto · 12h</div>
-    </div><div style="background: #fff; border-radius: 24px; padding: 6px 20px; box-shadow: 0 10px 26px rgba(40,80,130,.16); width: 318px; height: 158px; position: static; display: block; margin-left: 50px; margin-right: 50px; padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; margin-top: 15px; margin-bottom: 15px">
+    </div><div style="background: #fff; border-radius: 24px; box-shadow: 0 10px 26px rgba(40,80,130,.16); margin: 15px 20px; padding: 10px 24px;">
         <div style="display:flex; gap:13px; align-items:center; padding:16px 0; border-bottom:1px solid #eef2f6;">
           <div style="width:44px; height:44px; flex-shrink:0; border-radius:13px; background:#dff0ff; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#2a6fb0; font-family:'Fredoka',sans-serif; line-height:1;"><div style="font-size:9px; font-weight:600;">AGO</div><div style="font-size:18px; font-weight:700;">29</div></div>
           <div><div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">Sábado, 29 de agosto</div><div style="font-size:13.5px; color:#6b8299;">2026 · Piquenique a partir das 12h</div></div>
@@ -112,7 +112,7 @@
       <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; letter-spacing:.5px; text-transform:uppercase; text-shadow:2px 2px 0 #173a5b,-2px 2px 0 #173a5b,2px -2px 0 #173a5b,-2px -2px 0 #173a5b,2px 0 0 #173a5b,-2px 0 0 #173a5b,0 2px 0 #173a5b,0 -2px 0 #173a5b; margin:4px 2px 6px;">Confirme sua presença</div>
       <div style="font-size:13.5px; color:#4a6a86; margin:0 2px 14px; line-height:1.5;">A confirmação é essencial para liberar a entrada de vocês na portaria do condomínio. Por favor, confirme até <b>15 de agosto</b>.</div>
 
-      <div style="background: #fff; border-radius: 24px; padding: 20px; box-shadow: 0 10px 26px rgba(40,80,130,.16); width: 383px; height: 442px; transform-origin: 100% 0; transform: scale(1.0024,0.9887)">
+      <div style="background: #fff; border-radius: 24px; padding: 20px; box-shadow: 0 10px 26px rgba(40,80,130,.16);">
 
         <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
           <!-- SUCCESS STATE -->
@@ -219,16 +219,16 @@
                     animation:floatY 8s ease-in-out infinite 2s;">
       </div>
       <div style="font-family:'Luckiest Guy',cursive; font-size:26px; color:#ffd21e; letter-spacing:.5px; text-transform:uppercase; text-shadow:2px 2px 0 #173a5b,-2px 2px 0 #173a5b,2px -2px 0 #173a5b,-2px -2px 0 #173a5b,2px 0 0 #173a5b,-2px 0 0 #173a5b,0 2px 0 #173a5b,0 -2px 0 #173a5b; margin:4px 2px 14px;">Como chegar</div>
-      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="text-decoration:none; display:block; border-radius:24px; overflow:hidden; box-shadow:0 10px 26px rgba(40,80,130,.16); background:#fff;">
+      <div style="border-radius:24px; overflow:hidden; box-shadow:0 10px 26px rgba(40,80,130,.16); background:#fff;">
         <div style="height:170px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="endereco-foto" shape="rect" placeholder="Foto do local" hint-size="100%,170px"></x-import>
+          <iframe src="{{ mapsEmbedUrl }}" title="Mapa do local" style="width:100%; height:100%; border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div style="padding:16px 18px;">
           <div style="font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#143a5e;">Cond. Alphaville Maricá 1 - Bosque</div>
           <div style="font-size:13.5px; color:#6b8299; margin:2px 0 14px;">Maricá — Rio de Janeiro</div>
-          <div style="text-align:center; background:#143a5e; color:#fff; padding:14px; border-radius:14px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px;">Abrir no Google Maps →</div>
+          <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="text-decoration:none; display:block; text-align:center; background:#143a5e; color:#fff; padding:14px; border-radius:14px; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px;">Abrir no Google Maps →</a>
         </div>
-      </a>
+      </div>
     </div>
 
     <!-- ============ FOOTER ============ -->
@@ -371,6 +371,7 @@ class Component extends DCLogic {
       resetar: this.resetar,
       enviar: this.enviar,
       mapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Cond. Alphaville Maricá 1 - Bosque'),
+      mapsEmbedUrl: 'https://maps.google.com/maps?q=' + encodeURIComponent('Cond. Alphaville Maricá 1 - Bosque, Maricá - RJ') + '&z=15&output=embed',
     };
   }
 }
