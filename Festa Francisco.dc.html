@@ -252,6 +252,10 @@ class Component extends DCLogic {
   // (https://formspree.io) e cole a URL aqui. Em branco = modo demonstração
   // (as confirmações ficam salvas só neste aparelho).
   RSVP_ENDPOINT = 'https://formspree.io/f/mrenkvog';
+  // URL do Web App do Google Apps Script que grava cada resposta na
+  // planilha "Confirmações de Presença — Festa Francisco". Em branco =
+  // desligado. Instruções de configuração no final deste arquivo.
+  SHEETS_ENDPOINT = '';
   GIFTS = [
     { nome: 'Roupa tam. 3 anos', icon: '👕', iconBg:'#dff0ff', iconColor:'#2a6fb0' },
     { nome: 'Sapato tam. 24 ou 25', icon: '👟', iconBg:'#ffe7e4', iconColor:'#e8473b' },
@@ -312,6 +316,14 @@ class Component extends DCLogic {
       fetch(this.RSVP_ENDPOINT, {
         method:'POST',
         headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify(payload),
+      }).catch(()=>{});
+    }
+    if (this.SHEETS_ENDPOINT) {
+      // Sem header Content-Type: mantém a requisição "simples" (sem
+      // preflight CORS), que é o que o Apps Script aceita.
+      fetch(this.SHEETS_ENDPOINT, {
+        method:'POST',
         body: JSON.stringify(payload),
       }).catch(()=>{});
     }
